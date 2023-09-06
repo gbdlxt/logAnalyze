@@ -1,0 +1,42 @@
+{
+  "name": "ZEGO WEB LOG自动分析",
+  "version": "2.0",
+  "description": "ZEGO WEB LOG自动分析",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "./js/background.js"
+  },
+  "permissions": [
+    "storage",
+    "declarativeContent",
+    "activeTab",
+    "tabs",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://logcenter-new.oa.zego.im/*"
+  ],
+  "action": {
+    "default_popup": "./html/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://logcenter-new.oa.zego.im/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "./js/inject.js",
+        "./js/content_script.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "myXHRScript.js"
+    ],
+    "matches": [
+      "https://logcenter-new.oa.zego.im/*"
+    ]
+  }]
+}

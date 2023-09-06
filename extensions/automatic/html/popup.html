@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ZEGO WEB LOG KEY TEMPLETE</title>
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+  </head>
+  <body>
+    <div id="clock"></div>
+    <header>
+      <h1>Web express日志自动分析</h1>
+      <div class="header-box">
+          <textarea id="filterText" placeholder="1.拷贝右侧模版,仿造示例输入参数;
+2.不必完全输入,缺少部分参数会导致复杂链接无法生成,后面补齐再生成即可;
+3.startTime不填,默认为当天0时;可填任何时间格式(能被 new Date()实例化)
+4.endTime不填,默认为第二天0时;可填任何时间格式(能被 new Date()实例化)
+5.boss系统受时间区间限制,以startTime为基点,4小时区间内以endTime为准,否则boss系统的链接重算endTime;
+6.pullUserId是流拓扑必填项,表示拉流者."></textarea>
+      </div>
+      <button id="generateBtn">确定</button>
+  </header>
+    <main>
+    </main>
+    <footer>
+    </footer>
+    <script src="../js/generateLink.js"></script>
+    <script src="../js/gatherer.js"></script>
+    <script src="../js/popup.js"></script>
+  </body>
+</html>

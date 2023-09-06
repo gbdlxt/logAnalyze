@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ZEGO WEB LOG KEY TEMPLETE</title>
+    <link rel="stylesheet" type="text/css" href="../css/popup.css" />
+  </head>
+  <body>
+    <div id="clock"></div>
+    <header>
+      <h1>参数预置</h1>
+      <input placeholder="appid 必填" id="appid">
+      <input placeholder="userID" id="userID">
+      <input placeholder="roomid" id="roomid">
+      <input placeholder="startTime 必填" id="startTime">
+      <input placeholder="endTime" id="endTime">
+      <input placeholder="streamID 星图&流链路" id="streamID">
+      <input placeholder="pullUserID 流链路" id="pullUserID">
+      <button id="generatePath">生成链接</button>
+      <button id="reset">重置</button>
+    </header>
+    <main>
+      <h1>日志模版链接</h1>
+      <a id="recordPath_link" target="_blank" href="javascript:void(0)">查录制时间的链接</a>
+      <br>
+      <a id="pusherOrRefresh_link" target="_blank" href="javascript:void(0)">unload & PUBLISH_REQUESTING & NO_PUBLISH</a>
+      <br>
+      <a id="playerOrRefresh_link" target="_blank" href="javascript:void(0)">unload & PLAY_REQUESTING & NO_PLAY</a>
+      <br>
+      <a id="pusherStatePath_link" target="_blank" href="javascript:void(0)">房间 & pusherState链接</a>
+      <br>
+      <a id="playerStatePath_link" target="_blank" href="javascript:void(0)">房间 & playerState链接</a>
+      <br>
+      <a id="deviceChangePath_link" target="_blank" href="javascript:void(0)">设备 & 设备切换 & 推流设备状态 连接</a>
+      <br>
+      <a id="switchDevicePath_link" target="_blank" href="javascript:void(0)">切换摄像头麦克风查询</a>
+      <br>
+      <a id="starMapPath_link" target="_blank" href="javascript:void(0)">星图链接（需要先登录）</a>
+      <br>
+      <a id="topologyPath_link" target="_blank" href="javascript:void(0)">Boss 流链路</a>
+      <br>
+      <a id="udpPath_link" target="_blank" href="javascript:void(0)">UDP链接</a>
+      <br>
+      <a id="mediaNodePath_link" target="_blank" href="javascript:void(0)">媒体节点链接</a>
+
+    </main>
+    <footer>
+      <h1>计算时间差值</h1>
+      <input placeholder="初始时间">
+      <input placeholder="hits">
+      <button>计算</button>
+    </footer>
+    <script src="../js/popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "name": "ZEGO WEB日志模版",
+    "version": "1.0",
+    "description": "ZEGO Web Express 日志模版",
+    "manifest_version": 3,
+    "permissions": ["tabs", "storage"],
+    "action": {
+      "default_popup": "./html/popup.html"
+    }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>日志分析</title>
+    </head>
+    <body>
+
+    </body>
+</html>
+<script src="./util/JSONParser.js"></script>
+<!-- <script src="./util/roomAndStreamState.js"></script> -->
+<script src="./util/roomAndStreamState copy.js"></script>
+<script>
+    const roomAndStreamState = getLogHits();
+    const roomSateAbnormal = analysyse(roomAndStreamState, [roomStateChangedError]);
+    const publisherStateAbnormal = analysyse(roomAndStreamState, [publisherStateUpdateError]);
+    const playerStateAbnormal = analysyse(roomAndStreamState, [playerStateUpdateError, playerStateUpdateNoPlay]);
+    console.warn('[房间异常检测]', roomSateAbnormal);
+    console.warn('[推流异常检测]', publisherStateAbnormal);
+    console.warn('[拉流异常检测]', playerStateAbnormal);
+    
+</script>
